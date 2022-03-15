@@ -13,7 +13,13 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
-          ruby -v
-          jekyll -v
+          ls ${{ github.workspace }}          
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: |
+          ruby -v
+      - run: |
+          echo "HOME: ${{ home }}"
+          echo "GITHUB_WORKFLOW: ${{ github.workflow }}"
+          echo "GITHUB_RUN_ID: ${{ github.run.id }}"
+          echo "GITHUB_RUN_NUMBER: ${{ github.run.number }}"
+          echo "GITHUB_ACTION: ${{ github.action }}"
