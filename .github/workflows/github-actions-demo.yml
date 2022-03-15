@@ -15,8 +15,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}          
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: |
-          ruby -v
+      - run: ruby -v
       - run: |
           echo "HOME: ${{ home }}"
           echo "GITHUB_WORKFLOW: ${{ github.workflow }}"
